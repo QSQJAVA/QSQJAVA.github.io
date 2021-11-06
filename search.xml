@@ -3,11 +3,31 @@
   
     
     <entry>
+      <title><![CDATA[this is my first blog]]></title>
+      <url>/2021/11/06/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</url>
+      <content type="html"><![CDATA[<h1 id="怎么写博客"><a href="#怎么写博客" class="headerlink" title="怎么写博客"></a>怎么写博客</h1>]]></content>
+      
+        
+        <tags>
+            
+            <tag> 学习记录 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[第一篇博客]]></title>
       <url>/2021/11/06/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-      <content type="html"><![CDATA[<h1 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h1><h2 id="学习md语法"><a href="#学习md语法" class="headerlink" title="学习md语法"></a>学习md语法</h2><p>利用md语法在typora写出一篇漂亮的博客</p>
+      <content type="html"><![CDATA[<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><h2 id="学习md语法"><a href="#学习md语法" class="headerlink" title="学习md语法"></a>学习md语法</h2><p>利用md语法在typora写出一篇漂亮的博客</p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> 学习日志 </tag>
+            
+        </tags>
         
     </entry>
     
