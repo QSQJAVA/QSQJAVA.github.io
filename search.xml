@@ -3,11 +3,9 @@
   
     
     <entry>
-      <title></title>
-      <url>/2021/09/26/java/</url>
-      <content type="html"><![CDATA[<p>title: 一个冉冉升起的程序员</p>
-<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><h2 id="blog创建"><a href="#blog创建" class="headerlink" title="blog创建"></a>blog创建</h2><p>  历经两天的折磨，装好了blog。  </p>
-<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id="Java学习之路开启"><a href="#Java学习之路开启" class="headerlink" title="Java学习之路开启"></a>Java学习之路开启</h2><p>–程序员养成–</p>
+      <title><![CDATA[第一篇博客]]></title>
+      <url>/2021/11/06/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<h1 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h1><h2 id="学习md语法"><a href="#学习md语法" class="headerlink" title="学习md语法"></a>学习md语法</h2><p>利用md语法在typora写出一篇漂亮的博客</p>
 ]]></content>
       
         
