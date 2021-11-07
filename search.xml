@@ -3,6 +3,78 @@
   
     
     <entry>
+      <title><![CDATA[图床]]></title>
+      <url>/2021/11/07/%E5%9B%BE%E5%BA%8A/</url>
+      <content type="html"><![CDATA[<h1 id="picgo下载"><a href="#picgo下载" class="headerlink" title="picgo下载"></a>picgo下载</h1><p>开源下载地址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107191900219.png" alt="image-20211107191900219"></p>
+<p>下载X64.exe版本</p>
+<p>然后一键安装打开</p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107192136581.png" alt="image-20211107192136581"></p>
+<h1 id="设置云端图床"><a href="#设置云端图床" class="headerlink" title="设置云端图床"></a>设置云端图床</h1><p>利用阿里云 便宜且稳定</p>
+<p>1、购买链接一年只用9块钱：<a href="https://common-buy.aliyun.com/?spm=5176.7933691.1309819..74a72a66y3tNSV&amp;commodityCode=ossbag&amp;request=%7B%22region%22:%22china-common%22%7D#/buy">https://common-buy.aliyun.com/?spm=5176.7933691.1309819..74a72a66y3tNSV&amp;commodityCode=ossbag&amp;request=%7B%22region%22%3A%22china-common%22%7D#/buy</a></p>
+<p>2、进入控制台，激活对象储存，创建bucket</p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107192754949.png" alt="image-20211107192754949"></p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107192916122.png" alt="image-20211107192916122"></p>
+<p>3、创建文件目录</p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107193135989.png" alt="image-20211107193135989"></p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107193327863.png" alt="image-20211107193327863"></p>
+<p>4、设置AccessKey</p>
+<p>鼠标放在头像上选择AccessKey管理，选择子用户AccessKey管理。创建用户：</p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107193702450.png" alt="image-20211107193702450"></p>
+<p>创建成功后可以看到访问keyId和keySecret，复制下来！</p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107195455090.png" alt="image-20211107195455090"></p>
+<ol start="5">
+<li>打开PicGo 选择阿里云OSS，填入相关内容：</li>
+</ol>
+<ul>
+<li>keyid和KeySecret选择步骤四复制的内容</li>
+<li>存储空间名选择步骤二自己创建的Bucket名称</li>
+<li>存储区域，步骤二如果选的北京，就和我的一样</li>
+<li>存储路径选择步骤三自己新建的文件目录</li>
+<li>点击确认，设置为默认图床</li>
+</ul>
+<ol start="6">
+<li>点击上传区，上传一张图片测试一下，如果上传成功，就连接成功了</li>
+</ol>
+<h1 id="Typora-配置PicGo"><a href="#Typora-配置PicGo" class="headerlink" title="Typora 配置PicGo"></a>Typora 配置PicGo</h1><p>最后一步了，我们打开Typora，找到图片设置，设置如下，PicGo的路径选择自己安装的路径，然后验证图片上传是否成功</p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107200330924.png" alt="image-20211107200330924"></p>
+<h1 id="到这里就完成了Typora-与PicGo-的结合"><a href="#到这里就完成了Typora-与PicGo-的结合" class="headerlink" title="到这里就完成了Typora 与PicGo 的结合"></a>到这里就完成了Typora 与PicGo 的结合</h1><p>插入图片后的地址就变成阿里云服务器地址了</p>
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107201433627.png" alt="image-20211107201433627"></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> 博客搭建 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java学习之Collections]]></title>
+      <url>/2021/11/07/java%E5%AD%A6%E4%B9%A0%E4%B9%8BCollections/</url>
+      <content type="html"><![CDATA[<h1 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h1><p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107163303049.png" alt="image-20211107163303049"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectionsDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        list.add(<span class="number">10</span>);</span><br><span class="line">        list.add(<span class="number">30</span>);</span><br><span class="line">        list.add(<span class="number">20</span>);</span><br><span class="line">        list.add(<span class="number">50</span>);</span><br><span class="line">        list.add(<span class="number">40</span>);</span><br><span class="line">        list.add(<span class="number">60</span>);</span><br><span class="line"><span class="comment">//        Collections.sort(list);升序</span></span><br><span class="line"><span class="comment">//        Collections.reverse(list);倒转</span></span><br><span class="line"><span class="comment">//        Collections.shuffle(list);随机</span></span><br><span class="line">        System.out.println(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107163341023.png" alt="image-20211107163341023"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectionDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Student&gt; array = <span class="keyword">new</span> ArrayList&lt;Student&gt;();</span><br><span class="line">        Student s1 = <span class="keyword">new</span> Student(<span class="string">&quot;linqingxia&quot;</span>,<span class="number">22</span>);</span><br><span class="line">        Student s2 = <span class="keyword">new</span> Student(<span class="string">&quot;zhangmanyu&quot;</span>,<span class="number">23</span>);</span><br><span class="line">        Student s3 = <span class="keyword">new</span> Student(<span class="string">&quot;liuyan&quot;</span>,<span class="number">21</span>);</span><br><span class="line">        Student s4 = <span class="keyword">new</span> Student(<span class="string">&quot;shuqi&quot;</span>,<span class="number">21</span>);</span><br><span class="line">        array.add(s1);</span><br><span class="line">        array.add(s2);</span><br><span class="line">        array.add(s3);</span><br><span class="line">        array.add(s4);</span><br><span class="line">        Collections.sort(array, <span class="keyword">new</span> Comparator&lt;Student&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student s1, Student s2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">int</span> num = s1.getAge()-s2.getAge();</span><br><span class="line">                <span class="keyword">int</span> num1 = num==<span class="number">0</span>?s1.getName().compareTo(s2.getName()):num;</span><br><span class="line">                <span class="keyword">return</span> num1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">for</span>(Student s  :array)&#123;</span><br><span class="line">            System.out.println(s.getName()+<span class="string">&quot;,&quot;</span>+s.getAge());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107163408721.png" alt="image-20211107163408721"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PokeDomo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//定义牌盒</span></span><br><span class="line">        ArrayList&lt;String&gt; array = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="comment">//往牌盒放牌</span></span><br><span class="line">        <span class="comment">//定义花色组</span></span><br><span class="line">        String[] colors = &#123;<span class="string">&quot;♠&quot;</span>, <span class="string">&quot;♥&quot;</span>, <span class="string">&quot;♣&quot;</span>, <span class="string">&quot;♦&quot;</span>&#125;;</span><br><span class="line">        <span class="comment">//定义点数</span></span><br><span class="line">        String[] numbers = &#123;<span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>, <span class="string">&quot;4&quot;</span>, <span class="string">&quot;5&quot;</span>, <span class="string">&quot;6&quot;</span>, <span class="string">&quot;7&quot;</span>, <span class="string">&quot;8&quot;</span>, <span class="string">&quot;9&quot;</span>, <span class="string">&quot;10&quot;</span>, <span class="string">&quot;J&quot;</span>, <span class="string">&quot;Q&quot;</span>, <span class="string">&quot;K&quot;</span>, <span class="string">&quot;A&quot;</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(String color:colors)&#123;</span><br><span class="line">            <span class="keyword">for</span>(String number:numbers)&#123;</span><br><span class="line">                array.add(color+number);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        array.add(<span class="string">&quot;小王&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;大王&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//洗牌，把牌打乱</span></span><br><span class="line">        Collections.shuffle(array);</span><br><span class="line"><span class="comment">//        System.out.println(array);</span></span><br><span class="line">        <span class="comment">//发牌，遍历集合</span></span><br><span class="line">        <span class="comment">//定义三个人和底牌的牌盒</span></span><br><span class="line">        ArrayList&lt;String&gt; lqxarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; lyarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; fqyarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; lastarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="comment">//给每个人的牌盒发牌</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.size();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&lt;array.size()-<span class="number">3</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">1</span>) &#123;</span><br><span class="line">                    lqxarray.add(array.get(i));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">2</span>) &#123;</span><br><span class="line">                    lyarray.add(array.get(i));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">0</span>) &#123;</span><br><span class="line">                    fqyarray.add(array.get(i));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            lastarray.add(array.get(i));&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(lqxarray);</span><br><span class="line">        System.out.println(lyarray);</span><br><span class="line">        System.out.println(fqyarray);</span><br><span class="line">        System.out.println(lastarray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Java基础知识学习 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[开始记录Java的学习]]></title>
       <url>/2021/11/06/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95java%E5%AD%A6%E4%B9%A0/</url>
       <content type="html"></content>
@@ -11,20 +83,6 @@
         <tags>
             
             <tag> 学习记录 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[人生建议]]></title>
-      <url>/2021/11/06/%E4%BA%BA%E7%94%9F%E5%BB%BA%E8%AE%AE/</url>
-      <content type="html"><![CDATA[<h1 id="傻逼永远还是傻逼"><a href="#傻逼永远还是傻逼" class="headerlink" title="傻逼永远还是傻逼"></a>傻逼永远还是傻逼</h1>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 学习日志 </tag>
             
         </tags>
         
