@@ -1,11 +1,272 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search> 
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="File 12345678910111213import java.io.File;public class FileDemo &amp;#123;    public static void main(String[] args) &amp;#123;        File f1 &#x3D; new File(&quot;D\\javabiji\\java.txt&quot;);        System.out.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础学习之IO流">
+<meta property="og:url" content="http://example.com/2021/11/09/java%E5%AD%A6%E4%B9%A0%E4%B9%8BIO%E6%B5%81/index.html">
+<meta property="og:site_name" content="JAVA信徒">
+<meta property="og:description" content="File 12345678910111213import java.io.File;public class FileDemo &amp;#123;    public static void main(String[] args) &amp;#123;        File f1 &#x3D; new File(&quot;D\\javabiji\\java.txt&quot;);        System.out.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108153514030.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108155010838.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108160432165.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108165038617.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108185743641.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108185959510.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108191726680.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108200751238.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108200959783.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108202838936.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108202855337.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108210845457.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108213834394.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109100146256.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109101814123.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109105533042.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109125847855.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109153755504.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109161854341.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109162420118.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109162523140.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109162809609.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109163013239.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109163222290.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109170633260.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109173809669.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109175156117.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109181319824.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109183842191.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109185908694.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109191702680.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109194609506.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109195931998.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109201732642.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109202814618.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109202738885.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109202842397.png">
+<meta property="og:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109202930853.png">
+<meta property="article:published_time" content="2021-11-09T12:33:46.448Z">
+<meta property="article:modified_time" content="2021-11-09T12:33:46.448Z">
+<meta property="article:author" content="尘埃星球">
+<meta property="article:tag" content="Java基础知识学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108153514030.png">
+
+<link rel="canonical" href="http://example.com/2021/11/09/java%E5%AD%A6%E4%B9%A0%E4%B9%8BIO%E6%B5%81/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Java基础学习之IO流 | JAVA信徒</title>
   
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">JAVA信徒</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">记录JAVA修仙过程</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
     
-    <entry>
-      <title><![CDATA[Java基础学习之IO流]]></title>
-      <url>/2021/11/09/java%E5%AD%A6%E4%B9%A0%E4%B9%8BIO%E6%B5%81/</url>
-      <content type="html"><![CDATA[<h1 id="File"><a href="#File" class="headerlink" title="File"></a>File</h1><p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108153514030.png" alt="image-20211108153514030"></p>
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/qsqjava/qsqjava.github.io" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/09/java%E5%AD%A6%E4%B9%A0%E4%B9%8BIO%E6%B5%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="尘埃星球">
+      <meta itemprop="description" content="时间会回答一切">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JAVA信徒">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java基础学习之IO流
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-11-09 20:33:46" itemprop="dateCreated datePublished" datetime="2021-11-09T20:33:46+08:00">2021-11-09</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>18k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>16 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="File"><a href="#File" class="headerlink" title="File"></a>File</h1><p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108153514030.png" alt="image-20211108153514030"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        File f1 = <span class="keyword">new</span> File(<span class="string">&quot;D\\javabiji\\java.txt&quot;</span>);</span><br><span class="line">        System.out.println(f1);</span><br><span class="line">        File f2 = <span class="keyword">new</span> File(<span class="string">&quot;D\\javabiji&quot;</span>,<span class="string">&quot;java.txt&quot;</span>);</span><br><span class="line">        System.out.println(f2);</span><br><span class="line">        File f3 = <span class="keyword">new</span> File(<span class="string">&quot;D\\javabiji&quot;</span>);</span><br><span class="line">        File f4 = <span class="keyword">new</span> File(f3,<span class="string">&quot;java.txt&quot;</span>);</span><br><span class="line">        System.out.println(f4);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211108155010838.png" alt="image-20211108155010838" style="zoom:80%;" />
@@ -101,135 +362,246 @@
 <p><strong>字符</strong></p>
 <p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109202842397.png" alt="image-20211109202842397"></p>
 <p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdownsushe/image-20211109202930853.png" alt="image-20211109202930853"></p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> Java基础知识学习 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[图床]]></title>
-      <url>/2021/11/07/%E5%9B%BE%E5%BA%8A/</url>
-      <content type="html"><![CDATA[<h1 id="picgo下载"><a href="#picgo下载" class="headerlink" title="picgo下载"></a>picgo下载</h1><p>开源下载地址：<a href="https://github.com/Molunerfinn/PicGo/releases">https://github.com/Molunerfinn/PicGo/releases</a></p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107191900219.png" alt="image-20211107191900219"></p>
-<p>下载X64.exe版本</p>
-<p>然后一键安装打开</p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107192136581.png" alt="image-20211107192136581"></p>
-<h1 id="设置云端图床"><a href="#设置云端图床" class="headerlink" title="设置云端图床"></a>设置云端图床</h1><p>利用阿里云 便宜且稳定</p>
-<p>1、购买链接一年只用9块钱：<a href="https://common-buy.aliyun.com/?spm=5176.7933691.1309819..74a72a66y3tNSV&amp;commodityCode=ossbag&amp;request=%7B%22region%22:%22china-common%22%7D#/buy">https://common-buy.aliyun.com/?spm=5176.7933691.1309819..74a72a66y3tNSV&amp;commodityCode=ossbag&amp;request=%7B%22region%22%3A%22china-common%22%7D#/buy</a></p>
-<p>2、进入控制台，激活对象储存，创建bucket</p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107192754949.png" alt="image-20211107192754949"></p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107192916122.png" alt="image-20211107192916122"></p>
-<p>3、创建文件目录</p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107193135989.png" alt="image-20211107193135989"></p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107193327863.png" alt="image-20211107193327863"></p>
-<p>4、设置AccessKey</p>
-<p>鼠标放在头像上选择AccessKey管理，选择子用户AccessKey管理。创建用户：</p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107193702450.png" alt="image-20211107193702450"></p>
-<p>创建成功后可以看到访问keyId和keySecret，复制下来！</p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107195455090.png" alt="image-20211107195455090"></p>
-<ol start="5">
-<li>打开PicGo 选择阿里云OSS，填入相关内容：</li>
-</ol>
-<ul>
-<li>keyid和KeySecret选择步骤四复制的内容</li>
-<li>存储空间名选择步骤二自己创建的Bucket名称</li>
-<li>存储区域，步骤二如果选的北京，就和我的一样</li>
-<li>存储路径选择步骤三自己新建的文件目录</li>
-<li>点击确认，设置为默认图床</li>
-</ul>
-<ol start="6">
-<li>点击上传区，上传一张图片测试一下，如果上传成功，就连接成功了</li>
-</ol>
-<h1 id="Typora-配置PicGo"><a href="#Typora-配置PicGo" class="headerlink" title="Typora 配置PicGo"></a>Typora 配置PicGo</h1><p>最后一步了，我们打开Typora，找到图片设置，设置如下，PicGo的路径选择自己安装的路径，然后验证图片上传是否成功</p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107200330924.png" alt="image-20211107200330924"></p>
-<h1 id="到这里就完成了Typora-与PicGo-的结合"><a href="#到这里就完成了Typora-与PicGo-的结合" class="headerlink" title="到这里就完成了Typora 与PicGo 的结合"></a>到这里就完成了Typora 与PicGo 的结合</h1><p>插入图片后的地址就变成阿里云服务器地址了</p>
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107201433627.png" alt="image-20211107201433627"></p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 博客搭建 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Java学习之Collections]]></title>
-      <url>/2021/11/07/java%E5%AD%A6%E4%B9%A0%E4%B9%8BCollections/</url>
-      <content type="html"><![CDATA[<h1 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h1><p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107163303049.png" alt="image-20211107163303049"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectionsDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        list.add(<span class="number">10</span>);</span><br><span class="line">        list.add(<span class="number">30</span>);</span><br><span class="line">        list.add(<span class="number">20</span>);</span><br><span class="line">        list.add(<span class="number">50</span>);</span><br><span class="line">        list.add(<span class="number">40</span>);</span><br><span class="line">        list.add(<span class="number">60</span>);</span><br><span class="line"><span class="comment">//        Collections.sort(list);升序</span></span><br><span class="line"><span class="comment">//        Collections.reverse(list);倒转</span></span><br><span class="line"><span class="comment">//        Collections.shuffle(list);随机</span></span><br><span class="line">        System.out.println(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107163341023.png" alt="image-20211107163341023"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CollectionDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList&lt;Student&gt; array = <span class="keyword">new</span> ArrayList&lt;Student&gt;();</span><br><span class="line">        Student s1 = <span class="keyword">new</span> Student(<span class="string">&quot;linqingxia&quot;</span>,<span class="number">22</span>);</span><br><span class="line">        Student s2 = <span class="keyword">new</span> Student(<span class="string">&quot;zhangmanyu&quot;</span>,<span class="number">23</span>);</span><br><span class="line">        Student s3 = <span class="keyword">new</span> Student(<span class="string">&quot;liuyan&quot;</span>,<span class="number">21</span>);</span><br><span class="line">        Student s4 = <span class="keyword">new</span> Student(<span class="string">&quot;shuqi&quot;</span>,<span class="number">21</span>);</span><br><span class="line">        array.add(s1);</span><br><span class="line">        array.add(s2);</span><br><span class="line">        array.add(s3);</span><br><span class="line">        array.add(s4);</span><br><span class="line">        Collections.sort(array, <span class="keyword">new</span> Comparator&lt;Student&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student s1, Student s2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">int</span> num = s1.getAge()-s2.getAge();</span><br><span class="line">                <span class="keyword">int</span> num1 = num==<span class="number">0</span>?s1.getName().compareTo(s2.getName()):num;</span><br><span class="line">                <span class="keyword">return</span> num1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">for</span>(Student s  :array)&#123;</span><br><span class="line">            System.out.println(s.getName()+<span class="string">&quot;,&quot;</span>+s.getAge());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    </div>
 
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211107163408721.png" alt="image-20211107163408721"></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PokeDomo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//定义牌盒</span></span><br><span class="line">        ArrayList&lt;String&gt; array = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="comment">//往牌盒放牌</span></span><br><span class="line">        <span class="comment">//定义花色组</span></span><br><span class="line">        String[] colors = &#123;<span class="string">&quot;♠&quot;</span>, <span class="string">&quot;♥&quot;</span>, <span class="string">&quot;♣&quot;</span>, <span class="string">&quot;♦&quot;</span>&#125;;</span><br><span class="line">        <span class="comment">//定义点数</span></span><br><span class="line">        String[] numbers = &#123;<span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>, <span class="string">&quot;4&quot;</span>, <span class="string">&quot;5&quot;</span>, <span class="string">&quot;6&quot;</span>, <span class="string">&quot;7&quot;</span>, <span class="string">&quot;8&quot;</span>, <span class="string">&quot;9&quot;</span>, <span class="string">&quot;10&quot;</span>, <span class="string">&quot;J&quot;</span>, <span class="string">&quot;Q&quot;</span>, <span class="string">&quot;K&quot;</span>, <span class="string">&quot;A&quot;</span>&#125;;</span><br><span class="line">        <span class="keyword">for</span>(String color:colors)&#123;</span><br><span class="line">            <span class="keyword">for</span>(String number:numbers)&#123;</span><br><span class="line">                array.add(color+number);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        array.add(<span class="string">&quot;小王&quot;</span>);</span><br><span class="line">        array.add(<span class="string">&quot;大王&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//洗牌，把牌打乱</span></span><br><span class="line">        Collections.shuffle(array);</span><br><span class="line"><span class="comment">//        System.out.println(array);</span></span><br><span class="line">        <span class="comment">//发牌，遍历集合</span></span><br><span class="line">        <span class="comment">//定义三个人和底牌的牌盒</span></span><br><span class="line">        ArrayList&lt;String&gt; lqxarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; lyarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; fqyarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; lastarray = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="comment">//给每个人的牌盒发牌</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.size();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&lt;array.size()-<span class="number">3</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">1</span>) &#123;</span><br><span class="line">                    lqxarray.add(array.get(i));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">2</span>) &#123;</span><br><span class="line">                    lyarray.add(array.get(i));</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">0</span>) &#123;</span><br><span class="line">                    fqyarray.add(array.get(i));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            lastarray.add(array.get(i));&#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(lqxarray);</span><br><span class="line">        System.out.println(lyarray);</span><br><span class="line">        System.out.println(fqyarray);</span><br><span class="line">        System.out.println(lastarray);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    
+    
 
-<p><img src="https://1499842252.oss-cn-beijing.aliyuncs.com/image/markdown/image-20211108100355184.png" alt="image-20211108100355184"> </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PokerDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        HashMap&lt;Integer,String&gt; hm = <span class="keyword">new</span> HashMap&lt;Integer,String&gt;();</span><br><span class="line">        ArrayList&lt;Integer&gt; array = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line"><span class="comment">//      建立牌盒</span></span><br><span class="line">        String[] colors = &#123;<span class="string">&quot;♠&quot;</span>,<span class="string">&quot;♥&quot;</span>,<span class="string">&quot;♣&quot;</span>,<span class="string">&quot;♦&quot;</span>&#125;;</span><br><span class="line">        String[] numbers = &#123;<span class="string">&quot;2&quot;</span>,<span class="string">&quot;3&quot;</span>,<span class="string">&quot;4&quot;</span>,<span class="string">&quot;5&quot;</span>,<span class="string">&quot;6&quot;</span>,<span class="string">&quot;7&quot;</span>,<span class="string">&quot;8&quot;</span>,<span class="string">&quot;9&quot;</span>,<span class="string">&quot;10&quot;</span>,<span class="string">&quot;J&quot;</span>,<span class="string">&quot;Q&quot;</span>,<span class="string">&quot;K&quot;</span>,<span class="string">&quot;A&quot;</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (String number : numbers)&#123;</span><br><span class="line">            <span class="keyword">for</span> (String color : colors)&#123;</span><br><span class="line">                hm.put(index,color+number);</span><br><span class="line">                array.add(index);</span><br><span class="line">                index++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        hm.put(index,<span class="string">&quot;小王&quot;</span>);</span><br><span class="line">        array.add(index);</span><br><span class="line">        index++;</span><br><span class="line">        hm.put(index,<span class="string">&quot;大王&quot;</span>);</span><br><span class="line">        array.add(index);</span><br><span class="line">        index++;</span><br><span class="line"><span class="comment">//        System.out.println(array);</span></span><br><span class="line"><span class="comment">//        System.out.println(hm);</span></span><br><span class="line">        <span class="comment">//洗牌</span></span><br><span class="line">        Collections.shuffle(array);</span><br><span class="line"><span class="comment">//        System.out.println(array);</span></span><br><span class="line"><span class="comment">//        System.out.println(hm);</span></span><br><span class="line"><span class="comment">//      发牌</span></span><br><span class="line">        TreeSet&lt;Integer&gt; lqx = <span class="keyword">new</span> TreeSet&lt;Integer&gt;();</span><br><span class="line">        TreeSet&lt;Integer&gt; ly = <span class="keyword">new</span> TreeSet&lt;Integer&gt;();</span><br><span class="line">        TreeSet&lt;Integer&gt; fqy = <span class="keyword">new</span> TreeSet&lt;Integer&gt;();</span><br><span class="line">        TreeSet&lt;Integer&gt; dp = <span class="keyword">new</span> TreeSet&lt;Integer&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;array.size();i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> x =array.get(i);</span><br><span class="line">            <span class="keyword">if</span>(i&gt;= array.size()-<span class="number">3</span>)&#123;</span><br><span class="line">                dp.add(x);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (i%<span class="number">3</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                lqx.add(x);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i%<span class="number">3</span>==<span class="number">1</span>)&#123;</span><br><span class="line">                ly.add(x);</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i%<span class="number">3</span>==<span class="number">2</span>)&#123;</span><br><span class="line">                fqy.add(x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        lookPoker(<span class="string">&quot;林青霞&quot;</span>,lqx,hm);</span><br><span class="line">        lookPoker(<span class="string">&quot;柳岩&quot;</span>,ly,hm);</span><br><span class="line">        lookPoker(<span class="string">&quot;风清扬&quot;</span>,fqy,hm);</span><br><span class="line">        lookPoker(<span class="string">&quot;底牌&quot;</span>,dp,hm);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">lookPoker</span><span class="params">(String name ,TreeSet&lt;Integer&gt; ts,HashMap&lt;Integer,String&gt; hm)</span></span>&#123;</span><br><span class="line">        System.out.print(name+<span class="string">&quot;的牌：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span>(Integer key:ts)&#123;</span><br><span class="line">            String poker = hm.get(key);</span><br><span class="line">            System.out.print(poker+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0/" rel="tag"># Java基础知识学习</a>
+          </div>
 
-]]></content>
-      
         
-        <tags>
-            
-            <tag> Java基础知识学习 </tag>
-            
-        </tags>
+
+
         
-    </entry>
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/07/%E5%9B%BE%E5%BA%8A/" rel="prev" title="图床">
+      <i class="fa fa-chevron-left"></i> 图床
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
     
-    <entry>
-      <title><![CDATA[开始记录Java的学习]]></title>
-      <url>/2021/11/06/%E5%BC%80%E5%A7%8B%E8%AE%B0%E5%BD%95java%E5%AD%A6%E4%B9%A0/</url>
-      <content type="html"></content>
-      
-        
-        <tags>
-            
-            <tag> 学习记录 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[this is my first blog]]></title>
-      <url>/2021/11/06/%E6%96%B0%E5%BB%BA%E6%96%87%E6%9C%AC%E6%96%87%E6%A1%A3/</url>
-      <content type="html"><![CDATA[<h1 id="怎么写博客"><a href="#怎么写博客" class="headerlink" title="怎么写博客"></a>怎么写博客</h1>]]></content>
-      
-        
-        <tags>
-            
-            <tag> 学习记录 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[第一篇博客]]></title>
-      <url>/2021/11/06/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-      <content type="html"><![CDATA[<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><h2 id="学习md语法"><a href="#学习md语法" class="headerlink" title="学习md语法"></a>学习md语法</h2><p>利用md语法在typora写出一篇漂亮的博客</p>
-]]></content>
-      
-        
-        <tags>
-            
-            <tag> 学习日志 </tag>
-            
-        </tags>
-        
-    </entry>
-    
+  </article>
   
   
-</search>
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#File"><span class="nav-number">1.</span> <span class="nav-text">File</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-number">2.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO%E6%B5%81"><span class="nav-number">3.</span> <span class="nav-text">IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%E5%86%99%E6%95%B0%E6%8D%AE"><span class="nav-number">3.1.</span> <span class="nav-text">字节流写数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%E5%86%99%E6%95%B0%E6%8D%AE%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="nav-number">3.2.</span> <span class="nav-text">字节流写数据异常处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE-%E4%B8%80%E6%AC%A1%E4%B8%80%E4%B8%AA%E5%AD%97%E8%8A%82"><span class="nav-number">3.3.</span> <span class="nav-text">字节流读取数据,一次一个字节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E6%A1%88%E4%BE%8B"><span class="nav-number">3.4.</span> <span class="nav-text">复制文本文件案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%EF%BC%8C%E4%B8%80%E6%AC%A1%E4%B8%80%E4%B8%AA%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84"><span class="nav-number">3.5.</span> <span class="nav-text">字节流读取数据，一次一个字节数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E5%9B%BE%E7%89%87%E6%A1%88%E4%BE%8B"><span class="nav-number">3.6.</span> <span class="nav-text">复制图片案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">3.7.</span> <span class="nav-text">字节缓冲流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E8%A7%86%E9%A2%91%E6%A1%88%E4%BE%8B"><span class="nav-number">3.8.</span> <span class="nav-text">复制视频案例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="nav-number">3.9.</span> <span class="nav-text">字符流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E8%A1%A8"><span class="nav-number">3.10.</span> <span class="nav-text">编码表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E7%A0%81%E4%B8%8E%E8%A7%A3%E7%A0%81"><span class="nav-number">3.11.</span> <span class="nav-text">编码与解码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E8%A7%A3%E7%A0%81"><span class="nav-number">3.12.</span> <span class="nav-text">字符流中的编码解码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%845%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="nav-number">3.13.</span> <span class="nav-text">字符流写数据的5种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81%E8%AF%BB%E6%95%B0%E6%8D%AE"><span class="nav-number">3.14.</span> <span class="nav-text">字符流读数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6java%E6%96%87%E4%BB%B6"><span class="nav-number">3.15.</span> <span class="nav-text">复制java文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B%E7%89%88%EF%BC%9A"><span class="nav-number">3.16.</span> <span class="nav-text">改进版：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">3.17.</span> <span class="nav-text">字符缓冲流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6JAVA%E6%96%87%E4%BB%B6%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81%E6%94%B9%E8%BF%9B"><span class="nav-number">3.18.</span> <span class="nav-text">复制JAVA文件字符缓冲流改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81%E7%89%B9%E6%9C%89%E5%8A%9F%E8%83%BD"><span class="nav-number">3.19.</span> <span class="nav-text">字符缓冲流特有功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6JAVA%E6%96%87%E4%BB%B6%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81%E7%89%B9%E6%9C%89%E5%8A%9F%E8%83%BD%E6%94%B9%E8%BF%9B"><span class="nav-number">3.20.</span> <span class="nav-text">复制JAVA文件字符缓冲流特有功能改进</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO%E6%B5%81%E5%B0%8F%E7%BB%93"><span class="nav-number">3.21.</span> <span class="nav-text">IO流小结</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1396141677&auto=1&height=66"></iframe>
+      
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="尘埃星球"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">尘埃星球</p>
+  <div class="site-description" itemprop="description">时间会回答一切</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/qsqjava/qsqjava.github.io" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;qsqjava&#x2F;qsqjava.github.io" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1499842252@qq.com" title="E-Mail → mailto:1499842252@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">尘埃星球</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">21 分钟</span>
+</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,255,0' opacity='1' zIndex='-1' count='250' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":250,"height":500},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
